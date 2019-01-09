@@ -4,12 +4,12 @@ This Library gets the Unique Serial ID from the AVR Microcontroller.
 
 ## Unique Serial ID - Hidden Serial Number
 
-The datasheet of the Atmega328pb chip have a section 'Serial Number' how explain every chip have an unique device ID with 9 bytes. <br/>
-The datasheet of the Atmega328p chip does not say anything about serial number, but i tested using the same logic on the datasheet of the Atmega328pb. <br/>
-Apparently the chip Atmega328p have a hidden serial number, and others AVR Microcontroller maybe too. <br/>
-This library select only 8 bytes of the 'Serial Number'. <br/>
+The datasheet of the Atmega328pb chip has a section 'Serial Number' how explain every chip have a unique device ID with 9 bytes. <br/>
+The datasheet of the Atmega328p chip does not say anything about the serial number, but I tested using the same logic on the datasheet of the Atmega328pb. <br/>
+Apparently, the chip Atmega328p have a hidden serial number, and others AVR Microcontroller maybe too. <br/>
+This library selects only 8 bytes of the 'Serial Number'. <br/>
 
-## Dependences
+## Dependencies
 
 This library only works on AVR Microcontroller.
 
@@ -39,7 +39,7 @@ The library comes with [examples](examples). After installing the library you ne
 
 ### Variable: `UniqueID`
 
-UniqueID is a 8 bytes array of the Unique Serial ID.
+UniqueID has 8 bytes array of the Unique Serial ID.
 
 ```c
 for(size_t i = 0; i < 8; i++)
@@ -57,4 +57,3 @@ void UniqueIDdump(Stream);
 ---
 
 Do you like this library? Please [star this project on GitHub](https://github.com/ricaun/ArduinoUniqueID/stargazers)!
-
