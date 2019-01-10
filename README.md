@@ -8,18 +8,18 @@ The datasheet of the Atmega328pb chip has a section 'Serial Number' how explain 
 The datasheet of the Atmega328p chip does not say anything about the serial number, but I tested using the same Z-pointer Address on the datasheet of the Atmega328pb. <br/>
 Apparently, the chip Atmega328p have a hidden serial number with 9 bytes, and others AVR Microcontroller maybe too, like the table below. <br/>
 
-| Z-pointer Address | Atmega328pb | Atmega328p |
-| :-------: | :------: | :------:|
-| 0x000E | Byte 0 | Byte 0 |
-| 0x000F | Byte 1 | Byte 1 |
-| 0x0010 | Byte 2 | Byte 2 |
-| 0x0011 | Byte 3 | Byte 3 |
-| 0x0012 | Byte 4 | Byte 4 |
-| 0x0013 | Byte 5 | Byte 5 |
-| 0x0014 | Byte 6 | - |
-| 0x0015 | Byte 7 | Byte 6 |
-| 0x0016 | Byte 8 | Byte 7 |
-| 0x0017 | Byte 9 | Byte 8 |
+| Z-pointer Address | Atmega328pb | Atmega328p | UniqueID |
+| :-------: | :------: | :------: | :------:|
+| 0x000E | Byte 0 | Byte 0 | - |
+| 0x000F | Byte 1 | Byte 1 | Byte 0 |
+| 0x0010 | Byte 2 | Byte 2 | Byte 1 |
+| 0x0011 | Byte 3 | Byte 3 | Byte 2 |
+| 0x0012 | Byte 4 | Byte 4 | Byte 3 |
+| 0x0013 | Byte 5 | Byte 5 | Byte 4 |
+| 0x0014 | Byte 6 | - | - |
+| 0x0015 | Byte 7 | Byte 6 | Byte 5 |
+| 0x0016 | Byte 8 | Byte 7 | Byte 6 |
+| 0x0017 | Byte 9 | Byte 8 | Byte 7 |
 
 This library selects the last 8 bytes of the Serial Number. <br/>
 
