@@ -5,7 +5,9 @@ This Library gets the Unique Serial ID from the AVR Microcontroller.
 ## Unique Serial ID - Hidden Serial Number
 
 The datasheet of the Atmega328pb chip has a section 'Serial Number' how explain every chip have a unique device ID with 10 bytes. <br/>
+
 The datasheet of the Atmega328p chip does not say anything about the serial number, but I tested using the same Z-pointer Address on the datasheet of the Atmega328pb. <br/>
+
 Apparently, the chip Atmega328p have a hidden serial number with 9 bytes, and others AVR Microcontroller maybe too, like the table below. <br/>
 
 | Z-pointer Address | Atmega328pb | Atmega328p | UniqueID |
