@@ -5,7 +5,18 @@
 #define _ARDUINO_UNIQUE_ID_H_
 
 #define UniqueID _UniqueID.id
-#define UniqueIDdump(p) _UniqueID.dump(p)
+#define UniqueIDdump(stream)                \
+	{                                       \
+		stream.print("Serial Unique ID: "); \
+		for (size_t i = 0; i < 8; i++)      \
+		{                                   \
+			if (UniqueID[i] < 0x10)         \
+				stream.print("0");          \
+			stream.print(UniqueID[i], HEX); \
+			stream.print(" ");              \
+		}                                   \
+		stream.println();                   \
+	}
 
 #include <Arduino.h>
 
@@ -19,7 +30,6 @@ class ArduinoUniqueID
 {
   public:
 	ArduinoUniqueID();
-	void dump(Stream &s);
 	uint8_t id[8];
 };
 
