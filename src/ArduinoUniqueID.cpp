@@ -5,13 +5,9 @@
 
 ArduinoUniqueID::ArduinoUniqueID()
 {
-	for (size_t i = 0; i < 5; i++)
+	for(size_t i = 0; i < UniqueIDsize; i++)
 	{
-		id[i] = boot_signature_byte_get(0x0F + i);
-	}
-	for (size_t i = 0; i < 3; i++)
-	{
-		id[i + 5] = boot_signature_byte_get(0x15 + i);
+		id[i] = boot_signature_byte_get(0x0E + i + (UniqueIDsize == 9 && i > 5 ? 1 : 0));
 	}
 }
 
