@@ -18,4 +18,6 @@ UniqueIDdump	KEYWORD2
 # Constants (LITERAL1)
 #######################################
 
+UniqueID8	LITERAL1
 UniqueID	LITERAL1
+UniqueIDsize	LITERAL1

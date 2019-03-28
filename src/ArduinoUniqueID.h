@@ -8,6 +8,9 @@
 
 #if __AVR_ARCH__
 #include <avr/boot.h>
+#ifndef SIGRD
+#define SIGRD 5
+#endif
 #else
 #error "ArduinoUniqueID only works on AVR Architecture"
 #endif

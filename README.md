@@ -32,10 +32,12 @@ This library only works on AVR Microcontroller.
 * Atmega328pb - 10 bytes
 * Atmega328p - 9 bytes
 * Atmega2560 - 9 bytes
+* Attiny85 - 9 bytes
 
 ## Installation
 
-* Install the library by [Importing the .zip library](https://www.arduino.cc/en/Guide/Libraries#toc4) using either the [master](https://github.com/ricaun/ArduinoUniqueID/archive/master.zip) or one of the [releases](https://github.com/ricaun/ArduinoUniqueID/releases) ZIP files.
+* Install the library by [Using the Library Manager](https://www.arduino.cc/en/Guide/Libraries#toc3)
+* **OR** by [Importing the .zip library](https://www.arduino.cc/en/Guide/Libraries#toc4) using either the [master](https://github.com/ricaun/ArduinoUniqueID/archive/1.0.3.zip) or one of the [releases](https://github.com/ricaun/ArduinoUniqueID/releases) ZIP files.
 
 ## Examples
 
@@ -66,6 +68,15 @@ Print the hexadecimal bytes of the Unique Serial ID on the Stream.
 
 ```c
 void UniqueIDdump(Stream);
+```
+
+### Variable: UniqueID8
+
+UniqueID8 has the last 8 bytes array of the Unique Serial ID.
+
+```c
+for(size_t i = 0; i < 8; i++)
+  Serial.println(UniqueID8[i], HEX);
 ```
 
 Do you like this library? Please [star this project on GitHub](https://github.com/ricaun/ArduinoUniqueID/stargazers)!
