@@ -1,7 +1,7 @@
 //
 // ArduinoUniqueID.ino
 //
-// Example shows the Serial Unique ID on the Serial Monitor.
+// Example shows the UniqueID on the Serial Monitor.
 //
 
 #include <ArduinoUniqueID.h>
@@ -10,7 +10,7 @@ void setup()
 {
 	Serial.begin(115200);
 	UniqueIDdump(Serial);
-	Serial.print("Serial Unique ID: ");
+	Serial.print("UniqueID: ");
 	for (size_t i = 0; i < UniqueIDsize; i++)
 	{
 		if (UniqueID[i] < 0x10)

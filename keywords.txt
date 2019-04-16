@@ -13,6 +13,7 @@ ArduinoUniqueID	KEYWORD1
 #######################################
 
 UniqueIDdump	KEYWORD2
+UniqueID8dump	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

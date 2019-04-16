@@ -1,6 +1,8 @@
 # ArduinoUniqueID
 
-This Library gets the Unique Serial ID from the AVR Microcontroller.
+This Library gets the Unique Serial ID from the AVR Microcontroller and ESP Microcontroller.
+
+# AVR Microcontroller
 
 ## Unique Serial ID - Hidden Serial Number
 
@@ -23,10 +25,6 @@ Apparently, the chip Atmega328p have a hidden serial number with 9 bytes, and ot
 | 0x0016 | Byte 8 | Byte 7 |
 | 0x0017 | Byte 9 | Byte 8 |
 
-## Dependencies
-
-This library only works on AVR Microcontroller.
-
 ## Tested Microcontroller
 
 * Atmega328pb - 10 bytes
@@ -34,10 +32,48 @@ This library only works on AVR Microcontroller.
 * Atmega2560 - 9 bytes
 * Attiny85 - 9 bytes
 
+# ESP Microcontroller
+
+ESP microcontroller has basically two versions, ESP8266 and ESP32, each one has a specific function to request the chip id. <br/>
+
+* ESP8266 - ESP.getChipId() - 4 bytes
+* ESP32 - ESP.getEfuseMac() - 6 bytes
+
+| UniqueID | ESP8266 | ESP32 |
+| :-------: | :------: | :------:|
+| Byte 0| Byte 0 | Byte 0 |
+| Byte 1| Byte 1 | Byte 1 |
+| Byte 2| Byte 2 | Byte 2 |
+| Byte 3| Byte 3 | Byte 3 |
+| Byte 4| - | Byte 4 |
+| Byte 5| - | Byte 5 |
+
+To make the variable UniqueID8 to work propably the library uses the default bytes to 0x00. <br/>
+
+| UniqueID8 | ESP8266 | ESP32 |
+| :-------: | :------: | :------:|
+| Byte 0| 0x00 | 0x00 |
+| Byte 1| 0x00 | 0x00 |
+| Byte 2| 0x00 | Byte 0 |
+| Byte 3| 0x00 | Byte 1 |
+| Byte 4| Byte 0 | Byte 2 |
+| Byte 5| Byte 1 | Byte 3 |
+| Byte 6| Byte 2 | Byte 4 |
+| Byte 7| Byte 3 | Byte 5 |
+
+## Tested Microcontroller
+
+* ESP8266 - 4 bytes
+* ESP32 - 6 bytes
+
+## Dependencies
+
+This library only supports AVR Microcontroller and ESP Microcontroller.
+
 ## Installation
 
 * Install the library by [Using the Library Manager](https://www.arduino.cc/en/Guide/Libraries#toc3)
-* **OR** by [Importing the .zip library](https://www.arduino.cc/en/Guide/Libraries#toc4) using either the [master](https://github.com/ricaun/ArduinoUniqueID/archive/1.0.3.zip) or one of the [releases](https://github.com/ricaun/ArduinoUniqueID/releases) ZIP files.
+* **OR** by [Importing the .zip library](https://www.arduino.cc/en/Guide/Libraries#toc4) using either the [master](https://github.com/ricaun/ArduinoUniqueID/archive/1.0.4.zip) or one of the [releases](https://github.com/ricaun/ArduinoUniqueID/releases) ZIP files.
 
 ## Examples
 
@@ -77,6 +113,14 @@ UniqueID8 has the last 8 bytes array of the Unique Serial ID.
 ```c
 for(size_t i = 0; i < 8; i++)
   Serial.println(UniqueID8[i], HEX);
+```
+
+### Method: UniqueID8dump
+
+Print the last eight hexadecimal bytes of the Unique Serial ID on the Stream.
+
+```c
+void UniqueID8dump(Stream);
 ```
 
 Do you like this library? Please [star this project on GitHub](https://github.com/ricaun/ArduinoUniqueID/stargazers)!
