@@ -25,12 +25,12 @@ ArduinoUniqueID::ArduinoUniqueID()
 	uint64_t chipid = ESP.getEfuseMac();
 	id[0] = 0;
 	id[1] = 0;
-	id[2] = chipid >> 40;
-	id[3] = chipid >> 32;
-	id[4] = chipid >> 24;
-	id[5] = chipid >> 16;
-	id[6] = chipid >> 8;
-	id[7] = chipid;
+	id[2] = chipid;
+	id[3] = chipid >> 8;
+	id[4] = chipid >> 16;
+	id[5] = chipid >> 24;
+	id[6] = chipid >> 32;
+	id[7] = chipid >> 40;
 #endif
 }
 

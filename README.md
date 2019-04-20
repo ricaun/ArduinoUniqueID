@@ -41,12 +41,12 @@ ESP microcontroller has basically two versions, ESP8266 and ESP32, each one has 
 
 | UniqueID | ESP8266 | ESP32 |
 | :-------: | :------: | :------:|
-| Byte 0| Byte 0 | Byte 0 |
-| Byte 1| Byte 1 | Byte 1 |
-| Byte 2| Byte 2 | Byte 2 |
-| Byte 3| Byte 3 | Byte 3 |
-| Byte 4| - | Byte 4 |
-| Byte 5| - | Byte 5 |
+| Byte 0| Byte 0 | Byte 5 |
+| Byte 1| Byte 1 | Byte 4 |
+| Byte 2| Byte 2 | Byte 3 |
+| Byte 3| Byte 3 | Byte 2 |
+| Byte 4| - | Byte 1 |
+| Byte 5| - | Byte 0 |
 
 To make the variable UniqueID8 to work propably the library uses the default bytes to 0x00. <br/>
 
@@ -54,12 +54,12 @@ To make the variable UniqueID8 to work propably the library uses the default byt
 | :-------: | :------: | :------:|
 | Byte 0| 0x00 | 0x00 |
 | Byte 1| 0x00 | 0x00 |
-| Byte 2| 0x00 | Byte 0 |
-| Byte 3| 0x00 | Byte 1 |
-| Byte 4| Byte 0 | Byte 2 |
-| Byte 5| Byte 1 | Byte 3 |
-| Byte 6| Byte 2 | Byte 4 |
-| Byte 7| Byte 3 | Byte 5 |
+| Byte 2| 0x00 | Byte 5 |
+| Byte 3| 0x00 | Byte 4 |
+| Byte 4| Byte 0 | Byte 3 |
+| Byte 5| Byte 1 | Byte 2 |
+| Byte 6| Byte 2 | Byte 1 |
+| Byte 7| Byte 3 | Byte 0 |
 
 ## Tested Microcontroller
 
@@ -73,7 +73,7 @@ This library only supports AVR Microcontroller and ESP Microcontroller.
 ## Installation
 
 * Install the library by [Using the Library Manager](https://www.arduino.cc/en/Guide/Libraries#toc3)
-* **OR** by [Importing the .zip library](https://www.arduino.cc/en/Guide/Libraries#toc4) using either the [master](https://github.com/ricaun/ArduinoUniqueID/archive/1.0.4.zip) or one of the [releases](https://github.com/ricaun/ArduinoUniqueID/releases) ZIP files.
+* **OR** by [Importing the .zip library](https://www.arduino.cc/en/Guide/Libraries#toc4) using either the [master](https://github.com/ricaun/ArduinoUniqueID/archive/1.0.5.zip) or one of the [releases](https://github.com/ricaun/ArduinoUniqueID/releases) ZIP files.
 
 ## Examples
 
