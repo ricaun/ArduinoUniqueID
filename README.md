@@ -2,7 +2,7 @@
 
 This Library gets the Unique Serial ID from the AVR Microcontroller and ESP Microcontroller.
 
-# AVR Microcontroller
+# Atmel AVR Microcontroller
 
 ## Unique Serial ID - Hidden Serial Number
 
@@ -32,7 +32,15 @@ Apparently, the chip Atmega328p have a hidden serial number with 9 bytes, and ot
 * Atmega2560 - 9 bytes
 * Attiny85 - 9 bytes
 
-# ESP Microcontroller
+# Atmel SAM ARM Microcontroller
+Atmel SAM3X8E is used in Arduino Due. The Unique Identifier is located in the first 128 bits of the Flash memory mapping. So, at the address 0x400000-0x400003.
+"Each device integrates its own 128-bit unique identifier. These bits are factory configured and cannot be changed by the user. The ERASE pin has no effect on the unique identifier." (http://ww1.microchip.com/downloads/en/devicedoc/atmel-11057-32-bit-cortex-m3-microcontroller-sam3x-sam3a_datasheet.pdf)
+
+## Tested Microcontroller
+
+* Atmel SAM3X8E ARM Cortex-M3 - 16 bytes
+
+# Espressif ESP Microcontroller
 
 ESP microcontroller has basically two versions, ESP8266 and ESP32, each one has a specific function to request the chip id. <br/>
 
