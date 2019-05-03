@@ -1,6 +1,6 @@
 # ArduinoUniqueID
 
-This Library gets the Unique Serial ID from the AVR Microcontroller and ESP Microcontroller.
+This Library gets the Unique ID / Manufacture Serial Number from the Atmel AVR, SAM, SAMD, and ESP Microcontroller.
 
 # Atmel AVR Microcontroller
 
@@ -33,12 +33,33 @@ Apparently, the chip Atmega328p have a hidden serial number with 9 bytes, and ot
 * Attiny85 - 9 bytes
 
 # Atmel SAM ARM Microcontroller
-Atmel SAM3X8E is used in Arduino Due. The Unique Identifier is located in the first 128 bits of the Flash memory mapping. So, at the address 0x400000-0x400003.
-"Each device integrates its own 128-bit unique identifier. These bits are factory configured and cannot be changed by the user. The ERASE pin has no effect on the unique identifier." (http://ww1.microchip.com/downloads/en/devicedoc/atmel-11057-32-bit-cortex-m3-microcontroller-sam3x-sam3a_datasheet.pdf)
+
+Atmel SAM3X8E is used in Arduino Due. 
+
+The Unique Identifier is located in the first 128 bits of the Flash memory mapping. So, at the address 0x400000-0x400003.
+
+"Each device integrates its own 128-bit unique identifier. These bits are factory configured and cannot be changed by the user. The ERASE pin has no effect on the unique identifier." [Datasheet Section 7.2.3.7](http://ww1.microchip.com/downloads/en/devicedoc/atmel-11057-32-bit-cortex-m3-microcontroller-sam3x-sam3a_datasheet.pdf)
 
 ## Tested Microcontroller
 
 * Atmel SAM3X8E ARM Cortex-M3 - 16 bytes
+
+# Atmel SAMD ARM Microcontroller
+
+Atmel SAMD21 is used in Arduino Zero / Arduino M0. 
+
+Each device has a unique 128-bit serial number which is a concatenation of four 32-bit words contained at the following addresses: 
+
+* Word 0: 0x0080A00C 
+* Word 1: 0x0080A040
+* Word 2: 0x0080A044
+* Word 3: 0x0080A048
+
+The uniqueness of the serial number is guaranteed only when using all 128 bits. [Datasheet Section 9.3.3](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/Atmel-42181-SAM-D21_Datasheet.pdf)
+
+## Tested Microcontroller
+
+* Atmel SAMD21 ARM Cortex-M0 - 16 bytes
 
 # Espressif ESP Microcontroller
 
@@ -81,7 +102,7 @@ This library only supports AVR Microcontroller and ESP Microcontroller.
 ## Installation
 
 * Install the library by [Using the Library Manager](https://www.arduino.cc/en/Guide/Libraries#toc3)
-* **OR** by [Importing the .zip library](https://www.arduino.cc/en/Guide/Libraries#toc4) using either the [master](https://github.com/ricaun/ArduinoUniqueID/archive/1.0.5.zip) or one of the [releases](https://github.com/ricaun/ArduinoUniqueID/releases) ZIP files.
+* **OR** by [Importing the .zip library](https://www.arduino.cc/en/Guide/Libraries#toc4) using either the [master](https://github.com/ricaun/ArduinoUniqueID/archive/1.0.7.zip) or one of the [releases](https://github.com/ricaun/ArduinoUniqueID/releases) ZIP files.
 
 ## Examples
 

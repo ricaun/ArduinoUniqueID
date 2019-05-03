@@ -14,8 +14,9 @@
 #elif defined(ARDUINO_ARCH_ESP8266)
 #elif defined(ARDUINO_ARCH_ESP32)
 #elif defined(ARDUINO_ARCH_SAM)
+#elif defined(ARDUINO_ARCH_SAMD)
 #else
-#error "ArduinoUniqueID only works on AVR, SAM and ESP Architecture"
+#error "ArduinoUniqueID only works on AVR, SAM, SAMD and ESP Architecture"
 #endif
 
 #if defined(ARDUINO_ARCH_AVR)
@@ -35,6 +36,9 @@
 #define UniqueIDsize 6
 #define UniqueIDbuffer 8
 #elif defined(ARDUINO_ARCH_SAM)
+#define UniqueIDsize 16
+#define UniqueIDbuffer 16
+#elif defined(ARDUINO_ARCH_SAMD)
 #define UniqueIDsize 16
 #define UniqueIDbuffer 16
 #endif
