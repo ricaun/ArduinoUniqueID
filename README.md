@@ -95,11 +95,7 @@ To make the variable UniqueID8 to work propably the library uses the default byt
 * ESP8266 - 4 bytes
 * ESP32 - 6 bytes
 
-## Dependencies
-
-This library only supports AVR Microcontroller and ESP Microcontroller.
-
-## Installation
+# Installation
 
 * Install the library by [Using the Library Manager](https://www.arduino.cc/en/Guide/Libraries#toc3)
 * **OR** by [Importing the .zip library](https://www.arduino.cc/en/Guide/Libraries#toc4) using either the [master](https://github.com/ricaun/ArduinoUniqueID/archive/1.0.7.zip) or one of the [releases](https://github.com/ricaun/ArduinoUniqueID/releases) ZIP files.
