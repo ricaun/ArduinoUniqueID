@@ -1,6 +1,6 @@
 # ArduinoUniqueID
 
-This Library gets the Unique ID / Manufacture Serial Number from the Atmel AVR, SAM, SAMD, and ESP Microcontroller.
+This Library gets the Unique ID / Manufacture Serial Number from the Atmel AVR, SAM, SAMD, STM32, and ESP Microcontroller.
 
 # Atmel AVR Microcontroller
 
@@ -60,6 +60,17 @@ The uniqueness of the serial number is guaranteed only when using all 128 bits. 
 ## Tested Microcontroller
 
 * Atmel SAMD21 ARM Cortex-M0 - 16 bytes
+
+# STM32 Microcontroller
+
+STM32 32-bit Arm Cortex MCUs has a unique 96-bit serial number which is a concatenation of three 32-bit words, the address is different depending on the microcontroller. 
+
+The [Arduino Core STM32](https://github.com/stm32duino/Arduino_Core_STM32) has the variable UID_BASE whos contain the first 32-bit word of the serial number.
+
+## Tested Microcontroller
+
+* STM32F103C8 (BluePill Board) - 12 bytes
+* STM32L073RZ (Nucleo L073RZ) - 12 bytes
 
 # Espressif ESP Microcontroller
 
