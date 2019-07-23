@@ -65,7 +65,7 @@ The uniqueness of the serial number is guaranteed only when using all 128 bits. 
 
 STM32 32-bit Arm Cortex MCUs has a unique 96-bit serial number which is a concatenation of three 32-bit words, the address is different depending on the microcontroller. 
 
-The [Arduino Core STM32](https://github.com/stm32duino/Arduino_Core_STM32) has the variable UID_BASE whos contain the first 32-bit word of the serial number.
+The [Arduino Core STM32](https://github.com/stm32duino/Arduino_Core_STM32) has the functions HAL_GetUIDw0(), HAL_GetUIDw1() and HAL_GetUIDw2() for 96-bit UID.
 
 ## Tested Microcontroller
 
@@ -109,7 +109,7 @@ To make the variable UniqueID8 to work propably the library uses the default byt
 # Installation
 
 * Install the library by [Using the Library Manager](https://www.arduino.cc/en/Guide/Libraries#toc3)
-* **OR** by [Importing the .zip library](https://www.arduino.cc/en/Guide/Libraries#toc4) using either the [master](https://github.com/ricaun/ArduinoUniqueID/archive/1.0.7.zip) or one of the [releases](https://github.com/ricaun/ArduinoUniqueID/releases) ZIP files.
+* **OR** by [Importing the .zip library](https://www.arduino.cc/en/Guide/Libraries#toc4) using either the [master](https://github.com/ricaun/ArduinoUniqueID/archive/1.0.9.zip) or one of the [releases](https://github.com/ricaun/ArduinoUniqueID/releases) ZIP files.
 
 ## Examples
 

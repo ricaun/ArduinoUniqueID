@@ -90,15 +90,15 @@ ArduinoUniqueID::ArduinoUniqueID()
 
 #elif defined(ARDUINO_ARCH_STM32)
 	uint32_t pdwUniqueID[3];
-	pdwUniqueID[2] = *(uint32_t *)(UID_BASE + 0);
-	pdwUniqueID[1] = *(uint32_t *)(UID_BASE + 4);
-	pdwUniqueID[0] = *(uint32_t *)(UID_BASE + 8);
+	pdwUniqueID[0] = HAL_GetUIDw0();
+	pdwUniqueID[1] = HAL_GetUIDw1();
+	pdwUniqueID[2] = HAL_GetUIDw2();
 	for (int i = 0; i < 3; i++)
 	{
-		id[i*4+3] = (uint8_t)(pdwUniqueID[i] >> 24);
-		id[i*4+2] = (uint8_t)(pdwUniqueID[i] >> 16);
-		id[i*4+1] = (uint8_t)(pdwUniqueID[i] >> 8);
-		id[i*4+0] = (uint8_t)(pdwUniqueID[i] >> 0);
+		id[i*4+0] = (uint8_t)(pdwUniqueID[i] >> 24);
+		id[i*4+1] = (uint8_t)(pdwUniqueID[i] >> 16);
+		id[i*4+2] = (uint8_t)(pdwUniqueID[i] >> 8);
+		id[i*4+3] = (uint8_t)(pdwUniqueID[i] >> 0);
 	}
 #endif
 }
