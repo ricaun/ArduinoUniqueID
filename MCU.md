@@ -24,9 +24,13 @@ Apparently, the chip Atmega328p have a hidden serial number with 9 bytes, and ot
 ## Tested Microcontroller
 
 * Atmega328pb - 10 bytes
-* Atmega328p - 9 bytes
-* Atmega2560 - 9 bytes
-* Attiny85 - 9 bytes
+* Atmega328p - 9 bytes (Not Unique)
+* Atmega2560 - 9 bytes (Not Unique)
+* Attiny85 - 9 bytes (Not Unique)
+
+## Disclaimer
+
+The `Atmega328p`, `Atmega2560`, `Attiny85` does not have a 'Serial Number' on the datasheet, this mean it's possivel to have two microcontroller with the same `UniqueId`.
 
 # Atmel SAM ARM Microcontroller
 

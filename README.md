@@ -8,7 +8,7 @@ This Library gets the Unique ID / Manufacture Serial Number from the Atmel AVR, 
 
 ArduinoUniqueID supports the [Microcontrollers](MCU.md).
 
-* Atmel AVR
+* Atmel AVR - [`Not Unique Disclaimer`](MCU.md#Disclaimer)
 * Atmel SAM ARM
 * Atmel SAMD ARM
 * STM32
