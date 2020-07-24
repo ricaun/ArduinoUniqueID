@@ -42,20 +42,21 @@ The Unique Identifier is located in the first 128 bits of the Flash memory mappi
 
 # Atmel SAMD ARM Microcontroller
 
-Atmel SAMD21 is used in Arduino Zero / Arduino M0. 
-
 Each device has a unique 128-bit serial number which is a concatenation of four 32-bit words contained at the following addresses: 
 
-* Word 0: 0x0080A00C 
-* Word 1: 0x0080A040
-* Word 2: 0x0080A044
-* Word 3: 0x0080A048
+| - | SAMD21 | SAMD51 |
+| :-------: | :------: | :------:|
+| Word 0| 0x0080A00C | 0x008061FC |
+| Word 1| 0x0080A040 | 0x00806010 |
+| Word 2| 0x0080A044 | 0x00806014 |
+| Word 3| 0x0080A048 | 0x00806018 |
 
-The uniqueness of the serial number is guaranteed only when using all 128 bits. [Datasheet Section 9.3.3](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/Atmel-42181-SAM-D21_Datasheet.pdf)
+The uniqueness of the serial number is guaranteed only when using all 128 bits. 
 
 ## Tested Microcontroller
 
-* Atmel SAMD21 ARM Cortex-M0 - 16 bytes
+* Atmel SAMD21 ARM Cortex-M0 (Arduino Zero / Arduino M0) - 16 bytes - [Datasheet Section 9.3.3](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/Atmel-42181-SAM-D21_Datasheet.pdf)
+* Atmel SAMD51 ARM Cortex-M4 (Adafruit Metro M4)- 16 bytes - [Datasheet Section 9.6](http://ww1.microchip.com/downloads/en/DeviceDoc/60001507E.pdf)
 
 # STM32 Microcontroller
 
