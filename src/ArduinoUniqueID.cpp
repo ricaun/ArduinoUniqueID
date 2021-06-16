@@ -66,7 +66,7 @@ ArduinoUniqueID::ArduinoUniqueID()
 		status = EFC1->EEFC_FSR ;
 	} while ( (status & EEFC_FSR_FRDY) != EEFC_FSR_FRDY );
 
-#elif defined(ARDUINO_ARCH_SAMD)
+#elif defined(ARDUINO_ARCH_SAMD) || defined(ARDUINO_ARCH_SAML) || defined(ARDUINO_ARCH_SAMR)
 
 #if defined (__SAMD51__)
 	// SAMD51 from section 9.6 of the datasheet
@@ -76,7 +76,7 @@ ArduinoUniqueID::ArduinoUniqueID()
 	#define SERIAL_NUMBER_WORD_3	*(volatile uint32_t*)(0x00806018)
 #else
 //#elif defined (__SAMD21E17A__) || defined(__SAMD21G18A__)  || defined(__SAMD21E18A__) || defined(__SAMD21J18A__)
-	// SAMD21 from section 9.3.3 of the datasheet
+	// SAMD21 from section 9.3.3 of the datasheet ( SAMD ) or 11.6 of teh stasheet ( SAML and SAMR )
 	#define SERIAL_NUMBER_WORD_0	*(volatile uint32_t*)(0x0080A00C)
 	#define SERIAL_NUMBER_WORD_1	*(volatile uint32_t*)(0x0080A040)
 	#define SERIAL_NUMBER_WORD_2	*(volatile uint32_t*)(0x0080A044)
