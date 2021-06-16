@@ -11,13 +11,9 @@
 #ifndef SIGRD
 #define SIGRD 5
 #endif
-#elif defined(ARDUINO_ARCH_ESP8266)
-#elif defined(ARDUINO_ARCH_ESP32)
-#elif defined(ARDUINO_ARCH_SAM)
-#elif defined(ARDUINO_ARCH_SAMD)
-#elif defined(ARDUINO_ARCH_STM32)
+#elif defined(ARDUINO_ARCH_ESP8266)|| defined(ARDUINO_ARCH_ESP32) || defined(ARDUINO_ARCH_SAM) || defined(ARDUINO_ARCH_SAMD) || defined(ARDUINO_ARCH_SAML) || defined(ARDUINO_ARCH_SAMR) || defined(ARDUINO_ARCH_STM32)
 #else
-#error "ArduinoUniqueID only works on AVR, SAM, SAMD, STM32 and ESP Architecture"
+#error "ArduinoUniqueID only works on AVR, SAM, SAMD, SAML, SAMR, STM32 and ESP Architecture"
 #endif
 
 #if defined(ARDUINO_ARCH_AVR)
@@ -36,10 +32,7 @@
 #elif defined(ARDUINO_ARCH_ESP32)
 #define UniqueIDsize 6
 #define UniqueIDbuffer 8
-#elif defined(ARDUINO_ARCH_SAM)
-#define UniqueIDsize 16
-#define UniqueIDbuffer 16
-#elif defined(ARDUINO_ARCH_SAMD)
+#elif defined(ARDUINO_ARCH_SAM) || defined(ARDUINO_ARCH_SAMD) || defined(ARDUINO_ARCH_SAML) || defined(ARDUINO_ARCH_SAMR)
 #define UniqueIDsize 16
 #define UniqueIDbuffer 16
 #elif defined(ARDUINO_ARCH_STM32)
