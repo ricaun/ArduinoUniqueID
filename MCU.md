@@ -30,7 +30,7 @@ Apparently, the chip Atmega328p have a hidden serial number with 9 bytes, and ot
 
 ## Disclaimer
 
-The `Atmega328p`, `Atmega2560`, `Attiny85` does not have a 'Serial Number' on the datasheet, this mean it's possivel to have two microcontroller with the same `UniqueId`.
+The `Atmega328p`, `Atmega2560`, `Attiny85` does not have a 'Serial Number' on the datasheet, this mean it's possible to have two microcontroller with the same `UniqueId`.
 
 # Atmel SAM ARM Microcontroller
 
@@ -89,7 +89,7 @@ ESP microcontroller has basically two versions, ESP8266 and ESP32, each one has 
 | Byte 4| - | Byte 1 |
 | Byte 5| - | Byte 0 |
 
-To make the variable UniqueID8 to work propably the library uses the default bytes to 0x00. <br/>
+To make the variable UniqueID8 to work probably the library uses the default bytes to 0x00. <br/>
 
 | UniqueID8 | ESP8266 | ESP32 |
 | :-------: | :------: | :------:|
@@ -106,3 +106,11 @@ To make the variable UniqueID8 to work propably the library uses the default byt
 
 * ESP8266 - 4 bytes
 * ESP32 - 6 bytes
+
+# Teensy
+
+Todo
+
+# Raspberry Pi Pico - RP2040
+
+Todo
