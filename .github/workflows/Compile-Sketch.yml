@@ -6,7 +6,7 @@ on:
   - pull_request
 
 jobs:
-  compile-sketch:
+  Compile-Sketch:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,3 +21,4 @@ jobs:
           # The default is to compile for the Arduino Uno board. If you want to compile for other boards, use the `fqbn` input.
           sketch-paths: |
             ./examples/ArduinoUniqueID
+            ./examples/ArduinoUniqueID8
