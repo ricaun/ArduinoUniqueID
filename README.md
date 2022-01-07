@@ -2,7 +2,8 @@
 
 This Library gets the Unique ID / Manufacture Serial Number from the Atmel AVR, SAM, SAMD, STM32, and ESP Microcontroller.
 
-[![Build Status](https://travis-ci.org/ricaun/ArduinoUniqueID.svg?branch=master)](https://travis-ci.org/ricaun/ArduinoUniqueID)
+[![Compile Sketch](https://github.com/ricaun/ArduinoUniqueID/actions/workflows/Compile-Sketch.yml/badge.svg)](https://github.com/ricaun/ArduinoUniqueID/actions)
+
 
 # Microcontrollers
 
