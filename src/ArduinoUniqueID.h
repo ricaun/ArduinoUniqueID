@@ -59,9 +59,6 @@
 #elif defined(TEENSYDUINO)
 #define UniqueIDsize 16
 #define UniqueIDbuffer 16
-
-// KH
-//#elif defined(ARDUINO_ARCH_MBED_RP2040)
 #elif defined(ARDUINO_ARCH_RP2040)
   #define UniqueIDsize    8
   #define UniqueIDbuffer  8
