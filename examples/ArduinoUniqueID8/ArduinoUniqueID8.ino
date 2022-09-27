@@ -9,6 +9,7 @@
 void setup()
 {
 	Serial.begin(115200);
+	while(!Serial);
 	UniqueID8dump(Serial);
 	Serial.print("UniqueID: ");
 	for (size_t i = 0; i < 8; i++)
